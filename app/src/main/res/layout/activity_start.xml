@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/vehicle_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/activity_horizontal_margin"
+    android:orientation="vertical"
+    tools:context="geonet.obd.reader.activity.StartActivity">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <Button
+                        android:text="Start live"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/start_live"
+                        tools:ignore="ButtonStyle"
+                        android:layout_marginRight="25dp"/>
+
+                    <Button
+                        android:text="Stop live"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/stop_live"
+                        android:textAlignment="center"
+                        android:textSize="14sp"
+                        tools:ignore="ButtonStyle" />
+                </TableRow>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"/>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="86dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:id="@+id/FUEL_CONSUMPTION_RATE"
+                        android:tag="FUEL_CONSUMPTION_RATE"
+                        android:text="@string/text_consumption_default"
+                        android:textSize="36sp"
+                        android:textAlignment="viewStart" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:id="@+id/ENGINE_RUNTIME"
+                        android:tag="ENGINE_RUNTIME"
+                        android:text="@string/text_runtime_default"
+                        android:textSize="36sp"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/compass_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="@string/text_orientation_default"
+                        android:textSize="36sp"
+                        android:textAlignment="viewEnd" />
+
+                </TableRow>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:id="@+id/SPEED"
+                        android:tag="SPEED"
+                        android:text="0 km/h"
+                        android:background="@drawable/bg_circle"
+                        android:textSize="36sp"
+                        android:textColor="@color/colorAccent"
+                        android:layout_width="wrap_content"
+                        tools:ignore="ButtonStyle,HardcodedText"
+                        android:layout_marginRight="25dp"/>
+
+
+                    <Button
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:id="@+id/ENGINE_RPM"
+                        android:tag="ENGINE_RPM"
+                        android:text="0 tr/mn"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="36sp"
+                        android:background="@drawable/bg_circle"
+                        android:layout_width="wrap_content"
+                        tools:ignore="HardcodedText" />
+
+                </TableRow>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:text="@string/text_gps"
+                        android:textSize="@dimen/abc_text_size_medium_material"
+                        android:textAlignment="viewStart" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/text_bluetooth"
+                        android:textSize="@dimen/abc_text_size_medium_material" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="@string/text_obd"
+                        android:textSize="@dimen/abc_text_size_medium_material"
+                        android:textAlignment="viewEnd" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/GPS_POS"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:text=""
+                        android:textAlignment="viewStart" />
+
+                    <TextView
+                        android:id="@+id/BT_STATUS"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/OBD_STATUS"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text=""
+                        android:textAlignment="viewEnd" />
+                </TableRow>
+
+            </LinearLayout>
+        </LinearLayout>
+    </GridLayout>
+</LinearLayout>
